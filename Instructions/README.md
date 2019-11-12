@@ -75,22 +75,26 @@ Because the server is vulnerable to navigation via shell code, we might be able 
 - Click on `My Documents` then any attached document.
 - Using **only** the command injection techniques that you have learned this past week, see if you can read the following information from the server: 
   - The `/etc/hosts` file
+  ![cat_etc_hosts](cat_etc_hosts.png)
   - The `/etc/passwd` file
+  ![cat_etc_password](cat_etc_password.png)
 
 In addition to finding those files on the server, see if you can find information about the server itself. Specifically:
 
 - All the groups on the server
+![cookies.png](cat_etc_group.png)
 - The Kernel
+![kernel.png](kernel.png)
 - Any cronjobs they may have
-
+![crontab_list.png](crontab_list.png)
 - - -
 
 ## Part 3: Manually preforming XSS (0:10)
 
 **Scenario:**
-
+<script>alert(document.cookie)</script>
 Vulnerability to command injection would suggest other injection vulnerabilities such as cross-site-scripting (XSS). Because we verified that command injection attacks is an issue, the next step would be to see if we could inject our own code to access other confidential information located onto the Hackazon server. 
-
+![cookies](cookies.png)
 **Instructions:**
 
 - Find an injection point
