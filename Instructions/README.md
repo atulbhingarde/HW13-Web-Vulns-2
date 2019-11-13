@@ -47,7 +47,11 @@ If you are using VMware, run the following commands:
 ---
 
 
-## Part 1: Local File Inclusion 
+## Part 1: Local File Inclusion
+
+The local file inclusion is done using the `shell.php` that is added as a profile picture and it is used further for executing local commands as well.
+
+![local_file_inclusion](lfi.png)
 
 **Scenario:**
 
